@@ -1,0 +1,196 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  background-color: #08aeea;
+  background-image: linear-gradient(90deg, #08aeea 0%, #2af598 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: auto;
+  align-items: center;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 4px;
+  background-color: rgba(250, 250, 250, 0.9);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.row-column-inputs {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 120px);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.class-name-input {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+input[type='text']{
+}
+
+input[type='text']:focus {
+  outline: none;
+  border-bottom: solid 1px black;
+  transition: all 2s;
+}
+
+input[type='number'] {
+  color: #424949;
+  padding: 10px;
+  font-size: 18px;
+  width: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  border: grey 1px solid;
+  align-self: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+button {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: rgba(0, 0, 0, 0.8);
+  border: none rgba(0, 0, 0, 0);
+  background-color: #e6e6e6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+button .button-go {
+  background: rgb(28, 184, 65);
+}
+
+button:hover,
+button:focus {
+  background-image: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.05) 40%,
+    rgba(0, 0, 0, 0.1)
+  );
+}
+button:focus {
+  outline: 0;
+}
+button:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset,
+    0 0 6px rgba(0, 0, 0, 0.2) inset;
+  border-color: #000;
+}
+.class-name h1 {
+  text-align: center;
+}
+
+.front {
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  align-items: center;
+  margin: auto;
+  margin-right: 1rem;
+  border-radius: 4px;
+  border: #696969 solid 3px;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.front span {
+  transform: rotate(180deg);
+}
+
+.close {
+  height: 40px;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 700;
+  background: none;
+}
+button.close:hover,
+button.close:focus,
+button.close:active {
+  background: white;
+  border: none;
+}
+.student-wrapper {
+  display: grid;
+  gap: 20px;
+  margin: auto;
+  margin-right: 1rem;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d0d0d0;
+  border: crimson solid 3px;
+  border-radius: 4px;
+  padding: 1.3rem 0.8rem;
+  font-size: 1.2rem;
+  text-align: center;
+  transform: rotate(180deg);
+}
+
+.modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.modalInner {
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-200vh);
+  transition: all 0.5s;
+  height: calc(100vh - 100px);
+  color: black;
+  margin: 2rem;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal.open .modalInner {
+  transform: translateY(0);
+}
